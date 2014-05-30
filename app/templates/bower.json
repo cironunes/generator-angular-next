@@ -1,0 +1,19 @@
+{
+  "name": "templates",
+  "version": "0.0.0",
+  "authors": [
+    "Ciro Nunes <ciroanunes@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-mocks": "~1.2.16"
+  }
+}
