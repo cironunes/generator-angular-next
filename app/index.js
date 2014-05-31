@@ -37,7 +37,9 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
 
     this.copy('index.html', 'app/index.html');
 
-    this.copy('modules/greet.js', 'app/greet/greetDirective.js');
+    this.copy('modules/app.js', 'app/app.js');
+    this.copy('modules/greetModule.js', 'app/greet/greetModule.js');
+    this.copy('modules/greetDirective.js', 'app/greet/greetDirective.js');
     this.copy('modules/greetSpec.js', 'test/unit/greet/greetDirectiveSpec.js');
 
     this.copy('modules/homeSpec.js', 'test/e2e/homeSpec.js');
@@ -45,6 +47,7 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
     this.copy('protractor.conf.js', 'protractor.conf.js');
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
+    this.copy('_.bowerrc', '.bowerrc');
     this.copy('karma.conf.js', 'karma.conf.js');
     this.copy('gulpfile.js', 'gulpfile.js');
   },
