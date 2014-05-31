@@ -2,7 +2,7 @@
 
 ![Angular Yeoman](angular-yeoman.png)
 
-This generator is simple enough to create small reusable components (directives) to complete AngularJS applications.
+This generator is simple enough to create small reusable components (directives) and powerful enough to complete AngularJS applications.
 
 ## Install
 ```
