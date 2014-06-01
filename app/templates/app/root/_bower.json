@@ -1,5 +1,5 @@
 {
-  "name": "package",
+  "name": "<%= appName %>",
   "version": "0.0.0",
   "dependencies": {
     "angular": "~1.2.16",

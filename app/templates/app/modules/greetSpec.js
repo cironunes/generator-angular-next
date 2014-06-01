@@ -4,7 +4,7 @@ describe('Directive: Greet', function() {
       $rootScope,
       $compile;
 
-  beforeEach(module('myApp.greet'));
+  beforeEach(module('<%= appName %>.greet'));
 
   beforeEach(inject(function(_$rootScope_, _$compile_) {
     $rootScope = _$rootScope_;

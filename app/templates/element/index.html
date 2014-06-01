@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My App</title>
+</head>
+<body ng-app="myApp" ng-init="who = 'Ciro'">
+  <greet who="{{ who }}"></greet>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="greet/greetModule.js"></script>
+  <script src="greet/greetDirective.js"></script>
+</body>
+</html>
+

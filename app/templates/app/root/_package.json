@@ -1,13 +1,9 @@
 {
-  "name": "templates",
+  "name": "<%= appName %>",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "lodash": "^2.4.1"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "gulp": "^3.6.2",
     "gulp-connect": "^2.0.5",
@@ -15,8 +11,5 @@
     "karma-chrome-launcher": "^0.1.4",
     "karma-jasmine": "^0.1.5",
     "protractor": "^0.23.1"
-  },
-  "dependencies": {
-    "lodash": "^2.4.1"
   }
 }

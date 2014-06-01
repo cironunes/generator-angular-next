@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.greet')
+angular.module('<%= appName %>.greet')
   .directive('greet', function() {
     return {
       restrict: 'E',
