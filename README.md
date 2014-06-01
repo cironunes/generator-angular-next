@@ -15,12 +15,11 @@ $ npm install -g generator-angular-next
 ```
 $ yo angular-next
 ```
-
-2. Then start the application:
+1. Then start the application:
 ```
 $ gulp serve
 ```
-3. Open your browser and access it at [http://localhost:8080/](http://localhost:8080/)
+1. Open your browser and access it at [http://localhost:8080/](http://localhost:8080/
 
 ## Tasks
 ```serve``` Starts the web server
