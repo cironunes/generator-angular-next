@@ -26,8 +26,10 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
       name: 'appName',
       message: 'Which name do you like your app to have?'
     },{
+      type: 'list',
       name: 'type',
-      message: 'What kind of structure do you want? (element/app)'
+      message: 'What kind of structure do you want?',
+      choices: ['element', 'app']
     }];
 
     this.prompt(prompts, function (props) {
