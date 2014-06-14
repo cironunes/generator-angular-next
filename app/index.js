@@ -7,6 +7,10 @@ var chalk = require('chalk');
 
 var AngularNextGenerator = yeoman.generators.Base.extend({
   init: function () {
+    this.argument('appName', {type: String, required: false});
+    this.appName = this.appName || path.basename(process.cwd());
+    this.appName = this._.camelize(this._.slugify(this._.humanize(this.appName)));
+
     this.pkg = require('../package.json');
 
     // Have Yeoman greet the user.
@@ -23,9 +27,6 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
     var done = this.async();
 
     var prompts = [{
-      name: 'appName',
-      message: 'Which name do you like your app to have?'
-    },{
       type: 'list',
       name: 'type',
       message: 'Which kind of structure are you looking for?',
@@ -33,7 +34,6 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
-      this.appName = props.appName;
       this.type = (props.type || 'element');
 
       done();
