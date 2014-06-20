@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('<%= appName %>.greet')
+angular.module('<%= preffix %>.greet')
   .directive('greet', function() {
     return {
       restrict: 'E',

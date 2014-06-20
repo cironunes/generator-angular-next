@@ -27,6 +27,9 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
     var done = this.async();
 
     var prompts = [{
+      name: 'preffix',
+      message: 'Would you like to choose a preffix for your modules?'
+    }, {
       type: 'list',
       name: 'type',
       message: 'Which kind of structure are you looking for?',
@@ -34,6 +37,7 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
+      this.preffix = (props.preffix || this.appName);
       this.type = (props.type || 'element');
 
       done();

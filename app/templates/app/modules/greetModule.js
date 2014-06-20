@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('<%= appName %>.greet', []);
+angular.module('<%= preffix %>.greet', []);

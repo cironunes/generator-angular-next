@@ -21,7 +21,19 @@ describe('angular-next generator', function () {
     var expected = [
       // add files you expect to exist here.
       '.jshintrc',
-      '.editorconfig'
+      '.editorconfig',
+      'protractor.conf.js',
+      'package.json',
+      'bower.json',
+      '.bowerrc',
+      'karma.conf.js',
+      'gulpfile.js',
+      'app/index.html',
+      'app/app.js',
+      'app/greet/greetModule.js',
+      'app/greet/greetDirective.js',
+      'test/unit/greet/greetDirectiveSpec.js',
+      'test/e2e/homeSpec.js'
     ];
 
     helpers.mockPrompt(this.app, {
