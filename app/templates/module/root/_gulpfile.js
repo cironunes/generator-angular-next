@@ -1,5 +1,6 @@
 var gulp    = require('gulp');
 var connect = require('gulp-connect');
+var open    = require('gulp-open');
 var karma   = require('karma').server;
 var _       = require('lodash');
 
@@ -39,6 +40,9 @@ gulp.task('serve', ['watch'], function() {
     root: 'app',
     livereload: true
   });
+
+  gulp.src('./app/**/*.html')
+    .pipe(open('', { url: 'http://localhost:8080' }));
 });
 
 gulp.task('default', ['tdd']);
