@@ -22,6 +22,7 @@ describe('angular-next generator', function () {
       // add files you expect to exist here.
       '.jshintrc',
       '.editorconfig',
+      '.gitignore',
       'protractor.conf.js',
       'package.json',
       'bower.json',

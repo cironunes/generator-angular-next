@@ -54,7 +54,8 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
       'karma.conf.js',
       'gulpfile.js',
       '.editorconfig',
-      '.jshintrc'
+      '.jshintrc',
+      '.gitignore'
     ];
 
     files.forEach(function(file, index) {
