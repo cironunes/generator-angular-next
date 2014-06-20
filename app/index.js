@@ -33,12 +33,12 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
       type: 'list',
       name: 'type',
       message: 'Which kind of structure are you looking for?',
-      choices: ['element', 'app']
+      choices: ['module', 'app']
     }];
 
     this.prompt(prompts, function (props) {
       this.preffix = (props.preffix || this.appName);
-      this.type = (props.type || 'element');
+      this.type = (props.type || 'module');
 
       done();
     }.bind(this));
