@@ -59,7 +59,7 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
     ];
 
     files.forEach(function(file, index) {
-      this.copy(this.type + '/root/_' + file, file);
+      this.copy('common/_' + file, file);
     }.bind(this));
   },
 
