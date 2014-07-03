@@ -1,6 +1,7 @@
 var gulp    = require('gulp');
 var connect = require('gulp-connect');
 var open    = require('gulp-open');
+var jshint  = require('gulp-jshint');
 var karma   = require('karma').server;
 var _       = require('lodash');
 
@@ -25,9 +26,15 @@ gulp.task('html', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('js', function() {
+gulp.task('js', ['jshint'], function() {
   gulp.src('./app/**/*.js')
     .pipe(connect.reload());
+});
+
+gulp.task('jshint', function() {
+  return gulp.src(['app/**/*.js', '!app/{bower_components,bower_components/**/*.js}'])
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('watch', function() {
