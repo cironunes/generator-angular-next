@@ -48,18 +48,22 @@ var AngularNextGenerator = yeoman.generators.Base.extend({
   createConfigFiles: function() {
     var files = [
       'protractor.conf.js',
-      'package.json',
       'bower.json',
       '.bowerrc',
       'karma.conf.js',
-      'gulpfile.js',
       '.editorconfig',
       '.jshintrc',
       '.gitignore'
     ];
 
+    // common
     files.forEach(function(file, index) {
       this.copy('common/_' + file, file);
+    }.bind(this));
+
+    // specific
+    ['package.json', 'gulpfile.js'].forEach(function(file, index) {
+      this.copy(this.type + '/root/' + '_' + file, file);
     }.bind(this));
   },
 
