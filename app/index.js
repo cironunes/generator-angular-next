@@ -5,82 +5,72 @@ var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
 
-var AngularNextGenerator = yeoman.generators.Base.extend({
-  init: function () {
-    this.argument('appName', {type: String, required: false});
-    this.appName = this.appName || path.basename(process.cwd());
-    this.appName = this._.camelize(this._.slugify(this._.humanize(this.appName)));
+var AngularNextGenerator = module.exports = function (args, options, config) {
+  yeoman.generators.Base.apply(this, arguments);
 
-    this.pkg = require('../package.json');
+  this.argument('appName', {type: String, required: false});
+  this.appName = this.appName || path.basename(process.cwd());
+  this.appName = this._.camelize(this._.slugify(this._.humanize(this.appName)));
 
-    // Have Yeoman greet the user.
-    this.log(yosay('Welcome to the marvelous AngularNext generator!'));
+  this.pkg = require('../package.json');
 
-    this.on('end', function () {
-      if (!this.options['skip-install']) {
-        this.installDependencies();
-      }
-    });
-  },
+  // Have Yeoman greet the user.
+  this.log(yosay('Welcome to the marvelous AngularNext generator!'));
 
-  askFor: function () {
-    var done = this.async();
+  this.on('end', function () {
+    if (!this.options['skip-install']) {
+      this.installDependencies();
+    }
+  });
 
-    var prompts = [{
-      name: 'preffix',
-      message: 'Would you like to choose a preffix for your modules?'
-    }, {
-      type: 'list',
-      name: 'type',
-      message: 'Which kind of structure are you looking for?',
-      choices: ['module', 'app']
-    }];
+  this.hookFor('angular-next:common');
+};
 
-    this.prompt(prompts, function (props) {
-      this.preffix = (props.preffix || this.appName);
-      this.type = (props.type || 'module');
+util.inherits(AngularNextGenerator, yeoman.generators.Base);
 
-      done();
-    }.bind(this));
+AngularNextGenerator.prototype.askFor = function() {
+  var done = this.async();
 
-  },
+  var prompts = [{
+    name: 'preffix',
+    message: 'Would you like to choose a preffix for your modules?'
+  }, {
+    type: 'list',
+    name: 'type',
+    message: 'Which kind of structure are you looking for?',
+    choices: ['module', 'app']
+  }];
 
-  createConfigFiles: function() {
-    var files = [
-      'protractor.conf.js',
-      'bower.json',
-      '.bowerrc',
-      'karma.conf.js',
-      '.editorconfig',
-      '.jshintrc',
-      '.gitignore'
-    ];
+  this.prompt(prompts, function (props) {
+    this.preffix = (props.preffix || this.appName);
+    this.type = (props.type || 'module');
 
-    // common
-    files.forEach(function(file, index) {
-      this.copy('common/_' + file, file);
-    }.bind(this));
+    done();
+  }.bind(this));
+};
 
-    // specific
-    ['package.json', 'gulpfile.js'].forEach(function(file, index) {
-      this.copy(this.type + '/root/' + '_' + file, file);
-    }.bind(this));
-  },
+AngularNextGenerator.prototype.createConfigFiles = function() {
+  this.sourceRoot(path.join(__dirname, '../templates'));
 
-  createAppFiles: function () {
-    this.mkdir('app');
+  ['package.json', 'gulpfile.js'].forEach(function(file, index) {
+    this.copy(this.type + '/root/_' + file, file);
+  }.bind(this));
+};
 
-    this.copy(this.type + '/index.html', 'app/index.html');
+AngularNextGenerator.prototype.createAppFiles = function() {
+  this.sourceRoot(path.join(__dirname, '../templates'));
 
-    // js files
-    this.copy(this.type + '/modules/app.js', 'app/app.js');
-    this.copy(this.type + '/modules/greetModule.js', 'app/greet/greetModule.js');
-    this.copy(this.type + '/modules/greetDirective.js', 'app/greet/greetDirective.js');
-    this.copy(this.type + '/modules/greetSpec.js', 'test/unit/greet/greetDirectiveSpec.js');
+  this.mkdir('app');
 
-    // e2e
-    this.copy(this.type + '/modules/homeSpec.js', 'test/e2e/homeSpec.js');
-  },
-});
+  this.copy(this.type + '/index.html', 'app/index.html');
 
-module.exports = AngularNextGenerator;
+  // js files
+  this.copy(this.type + '/modules/app.js', 'app/app.js');
+  this.copy(this.type + '/modules/greetModule.js', 'app/greet/greetModule.js');
+  this.copy(this.type + '/modules/greetDirective.js', 'app/greet/greetDirective.js');
+  this.copy(this.type + '/modules/greetSpec.js', 'test/unit/greet/greetDirectiveSpec.js');
+
+  // e2e
+  this.copy(this.type + '/modules/homeSpec.js', 'test/e2e/homeSpec.js');
+};
+

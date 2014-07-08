@@ -11,8 +11,10 @@ describe('angular-next generator', function () {
       }
 
       this.app = helpers.createGenerator('angular-next:app', [
-        '../../app'
+        '../../app',
+        '../../common'
       ]);
+
       done();
     }.bind(this));
   });

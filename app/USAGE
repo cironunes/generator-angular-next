@@ -1,0 +1,24 @@
+Description:
+    Creates an awesome AngularJS app/module
+
+Example:
+    yo angular-next
+
+    This will create:
+        .editorconfig
+        .jshintrc
+        .gitignore
+        .bowerrc
+
+        gulpfile.js
+        bower.json
+        package.json
+        karma.conf.js
+        protractor.conf.js
+
+        app/index.html
+        app/app.js
+        app/greet/greetModule.js
+        app/greet/greetDirective.js
+        test/unit/greet/greetDirectiveSpec.js
+        test/e2e/homeSpec.js
