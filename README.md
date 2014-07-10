@@ -1,5 +1,7 @@
 # Yeoman Generator for the AngularJS Next Generation
 
+![](https://travis-ci.org/cironunes/generator-angular-next.svg?branch=master)
+
 ![Angular Yeoman](angular-yeoman.png)
 
 This generator is simple enough to create small reusable components (directives) and powerful enough to complete AngularJS applications.
