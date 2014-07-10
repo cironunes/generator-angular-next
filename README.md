@@ -7,23 +7,27 @@
 This generator is simple enough to create small reusable components (directives) and powerful enough to complete AngularJS applications.
 
 ## Install
+
 ```
 $ npm install -g generator-angular-next
 ```
 
 ## Getting started
 
-1. Scaffold the project:
-```
-$ yo angular-next
-```
-1. Then start the application:
-```
-$ gulp serve
-```
-1. Open your browser and access it at [http://localhost:8080/](http://localhost:8080/
+* Scaffold the project:
+
+  ```
+  $ yo angular-next
+  ```
+
+* Then start the application:
+
+  ```
+  $ gulp serve
+  ```
 
 ## Tasks
+
 ```serve``` Starts the web server
 
 ```
@@ -40,6 +44,7 @@ $ gulp tdd
 ```
 
 ## Subgenerators (coming soon)
+
 ```
 $ yo angular-next:module [name]
 $ yo angular-next:directive [name]
@@ -49,6 +54,7 @@ $ yo angular-next:view [name]
 ```
 
 ## Stack
+
 - AngularJS
 - Yeoman
 - NodeJS
@@ -58,6 +64,7 @@ $ yo angular-next:view [name]
 - Gulp
 
 ## Featues
+
 - [x] Unit tests with Karma and Jasmine
 - [x] E2E tests with Protractor
 - [x] E2E tests with Protractor
@@ -67,9 +74,11 @@ $ yo angular-next:view [name]
 - [ ] Code coverage with Istanbul
 
 ## Motivation
+
 The motivation behind this generator was the wish to DRY the proccess of configuring the necessary development environment for crafting small and modular components to be distributed on Bower or even entire applications.
 
 ## Team
+
 [![Ciro Nunes](https://2.gravatar.com/avatar/ac4189b770a4dbc0078935a68fff6f5c)](https://github.com/cironunes) | 
 --- |
 [Ciro Nunes](https://github.com/cironunes) |
