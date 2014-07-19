@@ -13,7 +13,6 @@ util.inherits(CommonGenerator, yeoman.generators.Base);
 CommonGenerator.prototype.setupEnv = function() {
   var files = [
     'protractor.conf.js',
-    'bower.json',
     '.bowerrc',
     'karma.conf.js',
     '.editorconfig',

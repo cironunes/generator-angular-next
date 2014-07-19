@@ -52,7 +52,7 @@ AngularNextGenerator.prototype.askFor = function() {
 AngularNextGenerator.prototype.createConfigFiles = function() {
   this.sourceRoot(path.join(__dirname, '../templates'));
 
-  ['package.json', 'gulpfile.js'].forEach(function(file, index) {
+  ['package.json', 'gulpfile.js', 'bower.json'].forEach(function(file, index) {
     this.copy(this.type + '/root/_' + file, file);
   }.bind(this));
 };
