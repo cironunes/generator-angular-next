@@ -43,14 +43,11 @@ $ gulp serve
 $ gulp tdd
 ```
 
-## Subgenerators (coming soon)
+## Subgenerators
 
 ```
 $ yo angular-next:module [name]
-$ yo angular-next:directive [name]
-$ yo angular-next:factory [name]
-$ yo angular-next:controller [name]
-$ yo angular-next:view [name]
+$ yo angular-next:directive [module_name] [name]
 ```
 
 ## Stack
