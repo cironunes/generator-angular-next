@@ -1,0 +1,10 @@
+Description:
+    Creates a directive attached to some module
+
+Example:
+    yo angular-next:directive greet greet
+
+    This will create:
+        app/greet/greetDirective.js
+        test/unit/greet/greetDirectiveSpec.js
+
