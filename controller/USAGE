@@ -1,0 +1,13 @@
+Description:
+    Creates a controller attached to some module
+
+    yo angular-next:directive [module] [controller]
+
+Example:
+    yo angular-next:directive greet greet
+
+    This will create:
+        app/greet/greetController.js
+        test/unit/greet/greetController.js
+
+
