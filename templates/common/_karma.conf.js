@@ -1,6 +1,12 @@
 module.exports = {
   frameworks: ['jasmine'],
+
+  plugins: ['karma-jasmine', 'karma-chrome-launcher', 'karma-nyan-reporter'],
+
+  reporters: ['nyan'],
+
   browsers: ['Chrome'],
+
   files: [
     'app/bower_components/angular/angular.js',
     'app/bower_components/angular-mocks/angular-mocks.js',
