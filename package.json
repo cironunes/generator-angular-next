@@ -28,6 +28,8 @@
     "yosay": "^0.1.0"
   },
   "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-bump": "^0.1.11",
     "gulp-open": "^0.2.8",
     "mocha": "*"
   },
