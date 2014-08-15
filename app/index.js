@@ -4,12 +4,14 @@ var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
+var nextUtils = require('../util.js');
 
 var AngularNextGenerator = module.exports = function (args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
   this.argument('appName', {type: String, required: false});
-  this.appName = this.appName || path.basename(process.cwd());
+  this.appName = this.name = this.appName || path.basename(process.cwd());
+  this.capitalizedName = nextUtils.capitalize(this.name);
   this.appName = this._.camelize(this._.slugify(this._.humanize(this.appName)));
 
   this.pkg = require('../package.json');
@@ -66,9 +68,9 @@ AngularNextGenerator.prototype.createAppFiles = function() {
 
   // js files
   this.copy(this.type + '/modules/app.js', 'app/app.js');
-  this.copy(this.type + '/modules/greetModule.js', 'app/greet/greetModule.js');
-  this.copy(this.type + '/modules/greetDirective.js', 'app/greet/greetDirective.js');
-  this.copy(this.type + '/modules/greetSpec.js', 'test/unit/greet/greetDirectiveSpec.js');
+  this.copy(this.type + '/modules/greetModule.js', 'app/' + this.name + '/' + this.name + 'Module.js');
+  this.copy(this.type + '/modules/greetDirective.js', 'app/' + this.name + '/' + this.name + 'Directive.js');
+  this.copy(this.type + '/modules/greetSpec.js', 'test/unit/' + this.name + '/' + this.name + 'DirectiveSpec.js');
 
   // e2e
   this.copy(this.type + '/modules/homeSpec.js', 'test/e2e/homeSpec.js');

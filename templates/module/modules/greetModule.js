@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('<%= preffix %>.greet', []);
+angular.module('<%= preffix %>.<%= name %>', []);

@@ -1,24 +1,23 @@
-describe('Directive: Greet', function() {
+describe('Directive: <%= name %>', function() {
   var scope,
       element,
       $rootScope,
       $compile;
 
-  beforeEach(module('<%= preffix %>.greet'));
+  beforeEach(module('<%= preffix %>.<%= name %>'));
 
   beforeEach(inject(function(_$rootScope_, _$compile_) {
     $rootScope = _$rootScope_;
     $compile = _$compile_;
 
     scope = $rootScope.$new();
-    scope.user = { name: 'Ciro' };
 
-    element = $compile('<greet who="{{user.name}}"></greet>')(scope);
+    element = $compile('<<%= preffix %>-<%= name %>></<%= preffix %>-<%= name %>>')(scope);
     scope.$digest();
   }));
 
   it('should say hello to the user', function() {
-    expect(element[0].innerText).toBe('Hello, Ciro!');
+    expect(element[0].innerText).toBe('Hello World!');
   });
 });
 

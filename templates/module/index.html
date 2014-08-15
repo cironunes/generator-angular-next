@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <title>My App</title>
 </head>
-<body ng-app="<%= appName %>" ng-init="who = 'Ciro'">
-  <greet who="{{ who }}"></greet>
+<body ng-app="<%= appName %>">
+  <<%= preffix %>-<%= name %>></<%= preffix %>-<%= name %>>
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="app.js"></script>
-  <script src="greet/greetModule.js"></script>
-  <script src="greet/greetDirective.js"></script>
+  <script src="<%= name %>/<%= name %>Module.js"></script>
+  <script src="<%= name %>/<%= name %>Directive.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>

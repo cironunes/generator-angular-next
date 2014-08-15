@@ -4,7 +4,7 @@ describe('angularjs homepage', function() {
 
     var greeting = element(by.id('greeting'));
 
-    expect(greeting.getText()).toEqual('Hello, Ciro!');
+    expect(greeting.getText()).toEqual('Hello World!');
   });
 });
 

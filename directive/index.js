@@ -4,17 +4,14 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var ScriptBase = require('../script-base.js');
-
-function capitalize(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-}
+var nextUtils = require('../util.js');
 
 var DirectiveGenerator = module.exports = function(args, options) {
   ScriptBase.apply(this, arguments);
 
   this.moduleName = args[0];
   this.name = args[1];
-  this.capitalizedName = capitalize(this.name);
+  this.capitalizedName = nextUtils.capitalize(this.name);
 };
 
 util.inherits(DirectiveGenerator, ScriptBase);

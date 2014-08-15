@@ -1,13 +1,10 @@
 'use strict';
 
-angular.module('<%= preffix %>.greet')
-  .directive('greet', function() {
+angular.module('<%= preffix %>.<%= name %>')
+  .directive('<%= preffix %><%= capitalizedName %>', function() {
     return {
       restrict: 'E',
-      scope: {
-        who: '@'
-      },
-      template: '<h1 id="greeting">Hello, {{ who }}!</h1>'
+      template: '<h1 id="greeting">Hello World!</h1>'
     };
   });
 
