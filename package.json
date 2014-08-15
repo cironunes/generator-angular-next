@@ -23,7 +23,8 @@
     "directive",
     "filter",
     "module",
-    "templates"
+    "templates",
+    "script-base.js"
   ],
   "keywords": [
     "yeoman-generator"
