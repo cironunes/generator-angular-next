@@ -22,6 +22,7 @@
     "controller",
     "directive",
     "filter",
+    "factory",
     "module",
     "templates",
     "script-base.js"
