@@ -1,0 +1,10 @@
+Description:
+    Creates a fatory attached to some module
+
+Example:
+    yo angular-next:factory greet greet
+
+    This will create:
+        app/greet/greetFactory.js
+        test/unit/greet/greetFactorySpec.js
+
