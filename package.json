@@ -22,7 +22,8 @@
     "controller",
     "directive",
     "filter",
-    "module"
+    "module",
+    "templates"
   ],
   "keywords": [
     "yeoman-generator"
