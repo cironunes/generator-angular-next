@@ -25,7 +25,8 @@
     "factory",
     "module",
     "templates",
-    "script-base.js"
+    "script-base.js",
+    "util.js"
   ],
   "keywords": [
     "yeoman-generator"
