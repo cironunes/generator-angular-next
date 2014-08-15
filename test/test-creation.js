@@ -33,9 +33,9 @@ describe('angular-next generator', function () {
       'gulpfile.js',
       'app/index.html',
       'app/app.js',
-      'app/greet/greetModule.js',
-      'app/greet/greetDirective.js',
-      'test/unit/greet/greetDirectiveSpec.js',
+      'app/temp/tempModule.js',
+      'app/temp/tempDirective.js',
+      'test/unit/temp/tempDirectiveSpec.js',
       'test/e2e/homeSpec.js'
     ];
 
