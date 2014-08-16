@@ -48,6 +48,7 @@ $ gulp tdd
 ```
 $ yo angular-next:module [name]
 $ yo angular-next:controller [module_name] [name]
+$ yo angular-next:factory [module_name] [name]
 $ yo angular-next:directive [module_name] [name]
 $ yo angular-next:filter [module_name] [name]
 ```
