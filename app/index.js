@@ -67,6 +67,7 @@ AngularNextGenerator.prototype.createAppFiles = function() {
   this.copy(this.type + '/index.html', 'app/index.html');
 
   // js files
+  if (this.type === 'app') this.name = 'greet';
   this.copy(this.type + '/modules/app.js', 'app/app.js');
   this.copy(this.type + '/modules/greetModule.js', 'app/' + this.name + '/' + this.name + 'Module.js');
   this.copy(this.type + '/modules/greetDirective.js', 'app/' + this.name + '/' + this.name + 'Directive.js');
