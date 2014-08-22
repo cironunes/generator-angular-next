@@ -14,6 +14,7 @@
     "karma-chrome-launcher": "^0.1.4",
     "karma-jasmine": "^0.1.5",
     "karma-nyan-reporter": "0.0.46",
+    "karma-coverage": "^0.2.6",
     "protractor": "^0.23.1"
   }
 }
