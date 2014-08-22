@@ -1,11 +1,18 @@
 module.exports = {
   frameworks: ['jasmine'],
 
-  plugins: ['karma-jasmine', 'karma-chrome-launcher', 'karma-nyan-reporter'],
+  plugins: ['karma-jasmine', 'karma-chrome-launcher', 'karma-nyan-reporter', 'karma-coverage'],
 
-  reporters: ['nyan'],
+  reporters: ['nyan', 'coverage'],
 
   browsers: ['Chrome'],
+
+  coverageReporter: {
+    type : 'html',
+    dir : 'coverage/'
+  },
+
+  preprocessors: { 'app/!(bower_components)/*.js' : ['coverage'] },
 
   files: [
     'app/bower_components/angular/angular.js',
