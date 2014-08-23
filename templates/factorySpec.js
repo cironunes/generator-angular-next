@@ -5,8 +5,8 @@ describe('Factory: <%= name %>', function() {
 
   beforeEach(module('<%= preffix %>.<%= moduleName %>'));
 
-  beforeEach(inject(function(_<%= name %>_) {
-    <%= name %> = _<%= name %>_;
+  beforeEach(inject(function(_<%= capitalizedName %>_) {
+    <%= name %> = _<%= capitalizedName %>_;
   }));
 
   it('should do something', function() {
