@@ -9,7 +9,7 @@ describe('Controller: <%= name %>', function() {
   beforeEach(inject(function($controller, $rootScope) {
     scope = $rootScope.$new();
 
-    ctrl = $controller('<%- name %>', {
+    ctrl = $controller('<%= capitalizedName %>Ctrl', {
       $scope: scope
     });
   }));
