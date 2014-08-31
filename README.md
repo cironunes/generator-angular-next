@@ -1,6 +1,7 @@
 # Yeoman Generator for the AngularJS Next Generation
 
-![](https://travis-ci.org/cironunes/generator-angular-next.svg?branch=master)
+![https://travis-ci.org/cironunes/generator-angular-next.svg](https://travis-ci.org/cironunes/generator-angular-next.svg?branch=master) 
+![https://david-dm.org/cironunes/generator-angular-next/](https://david-dm.org/cironunes/generator-angular-next.svg)
 
 ![Angular Yeoman](angular-yeoman.png)
 
