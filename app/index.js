@@ -20,12 +20,11 @@ var AngularNextGenerator = module.exports = function (args, options, config) {
   this.log(yosay('Welcome to the marvelous AngularNext generator!'));
 
   this.on('end', function () {
+    this.invoke('angular-next:common');
     if (!this.options['skip-install']) {
       this.installDependencies();
     }
   });
-
-  this.hookFor('angular-next:common');
 };
 
 util.inherits(AngularNextGenerator, yeoman.generators.Base);
@@ -52,6 +51,7 @@ AngularNextGenerator.prototype.askFor = function() {
 };
 
 AngularNextGenerator.prototype.createConfigFiles = function() {
+  this.invoke('angular-next:common');
   this.sourceRoot(path.join(__dirname, '../templates'));
 
   ['package.json', 'gulpfile.js', 'bower.json'].forEach(function(file, index) {
