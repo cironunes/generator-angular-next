@@ -4,6 +4,7 @@ var connect = require('gulp-connect');
 var open    = require('gulp-open');
 var jshint  = require('gulp-jshint');
 var inject  = require('gulp-inject');
+var compass = require('gulp-compass');
 var angularFileSort = require('gulp-angular-filesort');
 var karma   = require('karma').server;
 var _       = require('lodash');
@@ -34,12 +35,6 @@ gulp.task('js', ['inject', 'jshint'], function() {
     .pipe(connect.reload());
 });
 
-gulp.task('jshint', function() {
-  return gulp.src(['app/**/*.js', '!app/{bower_components,bower_components/**/*.js}'])
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('jshint-stylish'));
-});
-
 gulp.task('inject', function() {
   gulp.src('./app/index.html')
     .pipe(inject(
@@ -52,11 +47,28 @@ gulp.task('inject', function() {
     .pipe(gulp.dest('./app'));
 });
 
+gulp.task('jshint', function() {
+  return gulp.src(['app/**/*.js', '!app/{bower_components,bower_components/**/*.js}'])
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('jshint-stylish'));
+});
+
+gulp.task('css', function() {
+  return gulp.src(['app/app.scss'])
+    .pipe(compass({
+      sass: 'app',
+      css: 'app'
+    }))
+    .pipe(gulp.dest('./app'))
+    .pipe(connect.reload());
+});
+
 gulp.task('watch', function() {
   gulp.watch(['.app/index.html', './app/**/*.html'], ['html']);
   watch({ glob: ['app/app.js', 'app/**/*.js'] }, function() {
     gulp.start('js');
   });
+  gulp.watch(['./app/**/*.scss', './app/**/**/*.scss'], ['css']);
 });
 
 gulp.task('serve', ['watch'], function() {
