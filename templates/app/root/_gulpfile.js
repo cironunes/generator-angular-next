@@ -71,7 +71,7 @@ gulp.task('watch', function() {
   gulp.watch(['./app/**/*.scss', './app/**/**/*.scss'], ['css']);
 });
 
-gulp.task('serve', ['watch'], function() {
+gulp.task('serve', ['css', 'watch'], function() {
   connect.server({
     root: 'app',
     livereload: true
