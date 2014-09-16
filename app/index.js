@@ -20,7 +20,6 @@ var AngularNextGenerator = module.exports = function (args, options, config) {
   this.log(yosay('Welcome to the marvelous AngularNext generator!'));
 
   this.on('end', function () {
-    this.invoke('angular-next:common');
     if (!this.options['skip-install']) {
       this.installDependencies();
     }
