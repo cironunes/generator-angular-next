@@ -1,7 +1,9 @@
 # Yeoman Generator for the AngularJS Next Generation
 
-![https://travis-ci.org/cironunes/generator-angular-next.svg](https://travis-ci.org/cironunes/generator-angular-next.svg?branch=master) 
-![https://david-dm.org/cironunes/generator-angular-next/](https://david-dm.org/cironunes/generator-angular-next.svg)
+[![Travis CI Badge](https://travis-ci.org/cironunes/generator-angular-next.svg?branch=master)](https://travis-ci.org/cironunes/generator-angular-next)
+[![Dependency Status](https://david-dm.org/cironunes/generator-angular-next.svg)](https://david-dm.org/cironunes/generator-angular-next)
+[![devDependency Status](https://david-dm.org/cironunes/generator-angular-next/dev-status.svg)](https://david-dm.org/cironunes/generator-angular-next#info=devDependencies)
+[![peerDependency Status](https://david-dm.org/cironunes/generator-angular-next/peer-status.svg)](https://david-dm.org/cironunes/generator-angular-next#info=peerDependencies)
 
 ![Angular Yeoman](angular-yeoman.png)
 
