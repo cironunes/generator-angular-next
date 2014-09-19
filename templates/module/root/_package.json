@@ -11,6 +11,7 @@
     "gulp-inject": "^1.0.1",
     "gulp-open": "^0.2.8",
     "gulp-jshint": "^1.6.4",
+    "gulp-load-plugins": "^0.6.0",
     "gulp-watch": "^0.6.9",
     "jshint-stylish": "^0.2.0",
     "karma": "^0.12.16",
