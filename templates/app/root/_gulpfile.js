@@ -25,6 +25,16 @@ gulp.task('html', function() {
     .pipe($.connect.reload());
 });
 
+gulp.task('images', function() {
+  return gulp.src('./app/images/**/*')
+    .pipe($.cache($.imagemin({
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('dist/images'))
+    .pipe($.size({title: 'images'}));
+});
+
 gulp.task('js', ['inject', 'jshint'], function() {
   gulp.src('./app/**/*.js')
     .pipe($.connect.reload());
