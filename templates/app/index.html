@@ -9,7 +9,8 @@
 <body ng-app="<%= appName %>" ng-init="who = 'Ciro'">
   <greet who="{{ who }}"></greet>
 
-  <script src="bower_components/angular/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  <script>window.angular || document.write('<script src="bower_components/angular/angular.js"><\/script>')</script>
 
   <!-- app:js -->
   <!-- endinject -->
