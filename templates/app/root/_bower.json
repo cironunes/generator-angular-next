@@ -5,10 +5,10 @@
   },
   "version": "0.0.0",
   "devDependencies": {
-    "angular-mocks": "~1.2.23"
+    "angular-mocks": "~1.2.6"
   },
   "dependencies": {
-    "angular": "~1.2.23"
+    "angular": "~1.3"
   }
 }
 
